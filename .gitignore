@@ -1,0 +1,20 @@
+# VS Code
+.vscode/
+
+# CMake
+build/
+
+# CodeBlocks
+debug/
+bin/
+obj/
+*.cbp
+*.depend
+*.layout
+*.exe
+
+*.zip
+*.rar
+
+*.[oa]
+*~
