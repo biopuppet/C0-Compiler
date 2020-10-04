@@ -1,4 +1,4 @@
-# C0-Compiler
+# C0-Compiler ![Build Status](https://travis-ci.com/biopuppet/C0-Compiler.svg?branch=master)
 A C0(C-like grammar) compiler in C++11.
 Currently only supports MIPS32 architecture.
 
