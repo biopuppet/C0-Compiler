@@ -8,6 +8,8 @@ Currently only supports MIPS32 architecture.
 - CMake >= 3.0.0
 - MARS 4.5
 
+## Grammar
+See [wiki](https://github.com/biopuppet/C0-Compiler/wiki).
 
 ## Reference
 These wonderful projects are of great help to me. Special thanks.
@@ -15,3 +17,6 @@ These wonderful projects are of great help to me. Special thanks.
 - [clang](https://clang.llvm.org/)
 - [wgtcc](https://github.com/wgtdkp/wgtcc)
 - [8cc](https://github.com/rui314/8cc)
+
+## License
+GPLv3
