@@ -16,8 +16,8 @@ add_executable(c0c
     type.cpp
 )
 
-set(CMAKE_C_COMPILER "/usr/bin/clang")
-set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+set(CMAKE_C_COMPILER clang)
+set(CMAKE_CXX_COMPILER clang++)
 
 set(CMAKE_CXX_FLAGS "-g -Wall -fcolor-diagnostics -std=c++11")
 
