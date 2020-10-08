@@ -96,7 +96,7 @@ public:
                       const SourceLocation &loc,
                       const std::string &value);
 
-    static const TokenType Type(const std::string &_str)
+    static TokenType Type(const std::string &_str)
     {
         if (IsReservedKeyword(_str)) {
             return m_kwtab.at(_str);
@@ -156,11 +156,6 @@ public:
 
     Token(const TokenType type = NATK) : m_type(type) {}
 
-    Token(const Token &other)
-    {
-        *this = other;
-    }
-
     ~Token() {}
 
     bool operator!=(const Token &tok)
@@ -202,7 +197,7 @@ public:
 
     Token *At(size_t offset);
 
-    const TokenType GetType(size_t offset)
+    TokenType GetType(size_t offset)
     {
         return At(offset)->m_type;
     }
@@ -217,7 +212,7 @@ public:
         return At(0);
     }
 
-    const TokenType GetFrontType()
+    TokenType GetFrontType()
     {
         return At(0)->m_type;
     }

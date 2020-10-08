@@ -295,8 +295,6 @@ void QuadGenerator::VisitUnaryOp(UnaryOp *uop)
         m_curqa = NewTemp();
         NewQuad(QO_MINU, m_curqa, zero, rhs);
     }
-    else {
-    }
 }
 
 void QuadGenerator::VisitCallExpr(CallExpr *funcCall)
@@ -350,7 +348,7 @@ void QuadGenerator::VisitIdentifier(Identifier *ident)
 {
     debug("Visiting Identifier: %s\n", ident->Name().c_str());
     EmitComment("Visiting Identifier: %s", ident->Name().c_str());
-    // FIXME: could be AT_OFFSET, identifier may be in the stack
+    // FIXED: could be AT_OFFSET, identifier may be in the stack
     // Reversion:  is a temp var, won't work
     // Reversion: should find ident first, do not necessarily new
     // m_curqa = QuadAddr::New(QuadAddr::AT_IDENT, ident, m_curoffset);
@@ -360,15 +358,15 @@ void QuadGenerator::VisitIdentifier(Identifier *ident)
 
 void QuadGenerator::VisitIntegerLiteral(IntegerLiteral *cons)
 {
-    debug("Visiting Integer Literal: %d\n", cons->Val());
-    EmitComment("Visiting Integer Literal: %d", cons->Val());
+    debug("Visiting Integer Literal: %ld\n", cons->Val());
+    EmitComment("Visiting Integer Literal: %ld", cons->Val());
     m_curqa = QuadAddr::New(QuadAddr::AT_INTL, cons->Val());
 }
 
 void QuadGenerator::VisitCharLiteral(CharLiteral *cons)
 {
-    debug("Visiting Char Literal: %d\n", cons->Val());
-    EmitComment("Visiting Char Literal: %d", cons->Val());
+    debug("Visiting Char Literal: %u\n", cons->Val());
+    EmitComment("Visiting Char Literal: %u", cons->Val());
     m_curqa = QuadAddr::New(QuadAddr::AT_CHARL, cons->Val());
 }
 void QuadGenerator::VisitStringLiteral(StringLiteral *cons)
@@ -595,8 +593,8 @@ void QuadGenerator::VisitLabelStmt(LabelStmt *labelStmt) {}
 void QuadGenerator::VisitNullStmt(NullStmt *emptyStmt) {}
 void QuadGenerator::VisitCompoundStmt(CompoundStmt *compStmt)
 {
-    debug("Visiting Compound Stmt size: %d\n", compStmt->Size());
-    EmitComment("Visiting Compound Stmt size: %d", compStmt->Size());
+    debug("Visiting Compound Stmt size: %zu\n", compStmt->Size());
+    EmitComment("Visiting Compound Stmt size: %zu", compStmt->Size());
     for (auto decl : compStmt->m_decls) {
         assert(decl);
         Visit(decl);

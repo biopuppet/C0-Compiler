@@ -903,7 +903,7 @@ FunctionDecl *Parser::ParseNonvoidFunctionDecl()
           m_curscope, ident->Name().c_str());
 
     auto scope_type = func_type->IsChar() ? ScopeType::S_CHAR_FUNC :
-                                            ScopeType::S_INT_FUNC;  // FIXME
+                                            ScopeType::S_INT_FUNC;
     m_curscope = new Scope(m_curscope, scope_type);
     m_curscope->Insert(ident->Name(), ident);  // Nonvoid
 
@@ -1533,7 +1533,6 @@ DoStmt *Parser::ParseDoStmt()
         m_ts.PrintFront();  // (
     }
     Condition *cond = nullptr;
-    /* FIXME: +, -, IDENFR, INTCON, CHARCON, LPARENT */
     if (MatchFront(PLUS) || MatchFront(MINU) || MatchFront(IDENFR) ||
         MatchFront(INTCON) || MatchFront(CHARCON) || MatchFront(LPARENT)) {
         cond = ParseCondition();  // i < 5
@@ -1775,7 +1774,7 @@ BinaryOp *Parser::ParseAssignStmt()
         }
         // lhs can't be const qualified
         else if (lhs->IsConstQualified()) {
-            Error(m_ts.prev(), 'j');  // FIXME: maybe? unclear..
+            Error(m_ts.prev(), 'j');
         }
     }
     if (MatchFront(LBRACK)) {

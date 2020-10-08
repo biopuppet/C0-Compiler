@@ -97,14 +97,6 @@ public:
     {
     }
 
-    void SetOffset(unsigned off)
-    {
-        m_offset = off;
-    }
-    void SetMinion(QuadAddr *minion)
-    {
-        m_minion = new QuadAddr(*minion);
-    }
     bool IsChar() const
     {
         return m_type == AT_TMPCH || m_type == AT_CHARL;
