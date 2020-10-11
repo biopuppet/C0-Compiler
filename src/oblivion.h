@@ -269,7 +269,7 @@ void main()
     printf(sum4(abs(times(2, -2)), abs(-1), abs(-3), abs(22)));
 
     printf("7 + 'b' - 'a' = ", 7 + 'b' - 'a');
-    
+
     return;
 }
 
@@ -464,9 +464,8 @@ void complete_flower_num()
     }
   }
 
-  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
-  printf("'water flower'number is:");
-  y = 0 ;
+  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --"); printf("'water flower'number is:"); y = 0 ;
   for(i=100;i<100+MAX_NUM;i=i+1){
       n=i/100;
       j=mod(i/10,10);
@@ -483,10 +482,8 @@ void complete_flower_num()
 
 
 
-  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
-  h = 0 ;
-  leap = 1 ;
-  for(m = 2 ; m <= MAX_NUM ; m=m+1)
+  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --"); h = 0 ; leap = 1 ; for(m = 2 ; m <= MAX_NUM ; m=m+1)
   {
     k2 = m / 2;
     for(i=2; i<=k2; i=i+1){
@@ -680,7 +677,7 @@ void main(){
 
    printf("d: ",d);
 
-   
+
 
    printf("a+1: ",a+1);
 
@@ -768,9 +765,8 @@ void complete_flower_num()
     }
   }
 
-  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
-  printf("'water flower'number is:");
-  y = 0 ;
+  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --"); printf("'water flower'number is:"); y = 0 ;
   for(i=100;i<100+MAX_NUM;i=i+1){
       n=i/100;
       j=mod(i/10,10);
@@ -787,10 +783,8 @@ void complete_flower_num()
 
 
 
-  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
-  h = 0 ;
-  leap = 1 ;
-  for(m = 2 ; m <= MAX_NUM ; m=m+1)
+  printf("- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --"); h = 0 ; leap = 1 ; for(m = 2 ; m <= MAX_NUM ; m=m+1)
   {
     k2 = m / 2;
     for(i=2; i<=k2; i=i+1){
@@ -851,7 +845,8 @@ const int glb_const_int_5 = 111, glb_const_int_6 = -1, glb_const_int_7 = 0;
 const char glb_const_char_1 = '0';
 const char glb_const_char_2 = '_';
 const char glb_const_char_3 = 'a', glb_const_char_4 = 'z';
-const char glb_const_char_5 = '+', glb_const_char_6 = '-', glb_const_char_7 = '/', glb_const_char_8 = '*';
+const char glb_const_char_5 = '+', glb_const_char_6 = '-', glb_const_char_7 =
+'/', glb_const_char_8 = '*';
 
 int glb_int_1;
 int glb_int_2;
@@ -960,12 +955,14 @@ void main()
     const int main_const_int_1 = 0;
     const int main_const_int_2 = -2147364830;
     const int main_const_int_3 = +2, main_const_int_4 = -3333;
-    const int main_const_int_5 = 111, main_const_int_6 = -1, main_const_int_7 = 0;
+    const int main_const_int_5 = 111, main_const_int_6 = -1, main_const_int_7 =
+0;
 
     const char main_const_char_1 = '0';
     const char main_const_char_2 = '_';
     const char main_const_char_3 = 'a', main_const_char_4 = 'z';
-    const char main_const_char_5 = '+', main_const_char_6 = '-', main_const_char_7 = '/', main_const_char_8 = '*';
+    const char main_const_char_5 = '+', main_const_char_6 = '-',
+main_const_char_7 = '/', main_const_char_8 = '*';
 
     int main_int_1;
     int main_int_2;
@@ -1030,7 +1027,8 @@ void main()
             } while (num2 > 0);
             for (j = 10; j > 0; j = j - 2)
             {
-                printf("Atta boy %d%d!\n", 0 * 300 + (int0Function1() - j) / 2 - 100);
+                printf("Atta boy %d%d!\n", 0 * 300 + (int0Function1() - j) / 2 -
+100);
             }
         }
     }
@@ -1112,8 +1110,9 @@ void main()
     printf("testnum[1] = ", testnum[1]);
 
     printf("testnum[5] + testnum[9] = ", testnum[5] + testnum[9]);
-    printf("testnum[testnum[5]] + testnum[9] = ", testnum[testnum[5]] + testnum[9]);
-    printf("testnum[testnum[testnum[5]] + testnum[9]] = ", testnum[testnum[testnum[5]] + testnum[9]]);
+    printf("testnum[testnum[5]] + testnum[9] = ", testnum[testnum[5]] +
+testnum[9]); printf("testnum[testnum[testnum[5]] + testnum[9]] = ",
+testnum[testnum[testnum[5]] + testnum[9]]);
 
     printf("testnum[3] = ", testnum[testnum[testnum[5]] + testnum[9]]);
     printf("testnum[0] = ", testnum[0]);
@@ -1137,8 +1136,9 @@ void main()
     printf("testnum[1] = ", testnum[1]);
 
     printf("testnum[5] + testnum[9] = ", testnum[5] + testnum[9]);
-    printf("testnum[testnum[5]] + testnum[9] = ", testnum[testnum[5]] + testnum[9]);
-    printf("testnum[testnum[testnum[5]] + testnum[9]] = ", testnum[testnum[testnum[5]] + testnum[9]]);
+    printf("testnum[testnum[5]] + testnum[9] = ", testnum[testnum[5]] +
+testnum[9]); printf("testnum[testnum[testnum[5]] + testnum[9]] = ",
+testnum[testnum[testnum[5]] + testnum[9]]);
 
     printf("testnum[3] = ", testnum[testnum[testnum[5]] + testnum[9]]);
     printf("testnum[0] = ", testnum[0]);

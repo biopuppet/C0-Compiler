@@ -37,16 +37,14 @@
 #define COURSE_DEMANDS
 #endif  // !FUCK_COURSE_DEMANDS
 
-
 void _debug(const char *file, int line, const char *format, ...);
 
 #undef debug
 #ifdef NDEBUG
-    #define debug(...) ((void)0)
+#define debug(...) ((void)0)
 #else
-    #define debug(...) _debug(__FILE__, __LINE__, __VA_ARGS__)
+#define debug(...) _debug(__FILE__, __LINE__, __VA_ARGS__)
 #endif  // NDEBUG
-
 
 /* Optimization */
 #define CONST_PROPAGATION

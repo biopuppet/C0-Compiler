@@ -3,27 +3,26 @@
 
 bool ASTVisitor::Visit(ASTNode *node)
 {
-    if (node == nullptr) {
-        if (m_top != nullptr) {
-            return Visit(m_top);
-        }
-        else {
-            return false;
-        }
+  if (node == nullptr) {
+    if (m_top != nullptr) {
+      return Visit(m_top);
     }
-    // TODO
-    return true;
+    else {
+      return false;
+    }
+  }
+  // TODO
+  return true;
 }
 
 bool ASTVisitor::TraverseTranslationUnitDecl(TranslationUnitDecl *tud)
 {
-    if (tud == nullptr) {
-        return false;
-    }
-    for (auto extDecl : tud->ExtDecls()) {
-        Visit(extDecl);
-        //std::cout << extDecl << std::endl;
-    }
-	return false;
+  if (tud == nullptr) {
+    return false;
+  }
+  for (auto extDecl : tud->ExtDecls()) {
+    Visit(extDecl);
+    // std::cout << extDecl << std::endl;
+  }
+  return false;
 }
-

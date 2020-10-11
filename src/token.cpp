@@ -101,50 +101,48 @@ const Token::TokenMap Token::m_kwtab = {{"const", CONSTTK},
 std::ofstream &operator<<(std::ofstream &_outstream, const Token &_token)
 {
 #if defined(DEBUG_LEXER)
-    _outstream.setf(std::ios::left);
-    _outstream << std::setw(10) << tokenlist[_token.m_type] << " "
-               << std::setw(10) << _token.m_value << std::setw(0)
-               << _token.m_loc.line << ":" << _token.m_loc.column << '\t';
-    //<< std::setw(10) << _token.m_loc.line_begin << std::endl;
-    auto p = _token.m_loc.line_begin;
-    while (p && *p != '\n' && *p != '\0')
-        _outstream << *p++;
-    _outstream << std::endl;
+  _outstream.setf(std::ios::left);
+  _outstream << std::setw(10) << tokenlist[_token.m_type] << " "
+             << std::setw(10) << _token.m_value << std::setw(0)
+             << _token.m_loc.line << ":" << _token.m_loc.column << '\t';
+  //<< std::setw(10) << _token.m_loc.line_begin << std::endl;
+  auto p = _token.m_loc.line_begin;
+  while (p && *p != '\n' && *p != '\0')
+    _outstream << *p++;
+  _outstream << std::endl;
 #elif defined(PRINT_OUTPUT)
-    _outstream << tokenlist[_token.m_type] << " " << _token.m_value
-               << std::endl;
+  _outstream << tokenlist[_token.m_type] << " " << _token.m_value << std::endl;
 #endif
-    return _outstream;
+  return _outstream;
 }
 
 std::ostream &operator<<(std::ostream &_outstream, const Token &_token)
 {
-    _outstream << tokenlist[_token.m_type] << " " << _token.m_value
-               << std::endl;
-    return _outstream;
+  _outstream << tokenlist[_token.m_type] << " " << _token.m_value << std::endl;
+  return _outstream;
 }
 
 Token *Token::New(const TokenType type)
 {
-    return new (tokenpool.Alloc()) Token(type);
+  return new (tokenpool.Alloc()) Token(type);
 }
 
 Token *Token::New(const Token &other)
 {
-    return new (tokenpool.Alloc()) Token(other);
+  return new (tokenpool.Alloc()) Token(other);
 }
 
 Token *Token::New(const TokenType type,
                   const SourceLocation &loc,
                   const std::string &str)
 {
-    // TODO: optimize with c++11
-    return new (tokenpool.Alloc()) Token(type, loc, str);
+  // TODO: optimize with c++11
+  return new (tokenpool.Alloc()) Token(type, loc, str);
 }
 
 void Token::Delete()
 {
-    tokenpool.Free(this);
+  tokenpool.Free(this);
 }
 
 /**
@@ -152,12 +150,12 @@ void Token::Delete()
  */
 Token *TokenStream::At(size_t offset)
 {
-    auto it = begin() + offset;
+  auto it = begin() + offset;
 
-    while (it == end()) {
-        m_td->push_back(m_lexer->GetToken());
-    }
-    return *it;
+  while (it == end()) {
+    m_td->push_back(m_lexer->GetToken());
+  }
+  return *it;
 }
 
 /**
@@ -165,14 +163,14 @@ Token *TokenStream::At(size_t offset)
  */
 Token *TokenStream::PrintFront()
 {
-    if (empty()) {
-        debug("Paser::PrintFront(): Empty queue! nothing to be printed.");
-        return nullptr;
-    }
+  if (empty()) {
+    debug("Paser::PrintFront(): Empty queue! nothing to be printed.");
+    return nullptr;
+  }
 #ifdef PRINT_OUTPUT
-    outstream << *At(0);
+  outstream << *At(0);
 #endif  // PRINT_OUTPUT
-    return FlushFront();
+  return FlushFront();
 }
 
 /**
@@ -181,11 +179,11 @@ Token *TokenStream::PrintFront()
  */
 Token *TokenStream::FlushFront()
 {
-    if (empty()) {
-        debug("Paser::FlushFront(): Empty queue! nothing to be Poped.");
-        return nullptr;
-    }
-    auto temp = GetFront();
-    pop_front();
-    return temp;
+  if (empty()) {
+    debug("Paser::FlushFront(): Empty queue! nothing to be Poped.");
+    return nullptr;
+  }
+  auto temp = GetFront();
+  pop_front();
+  return temp;
 }

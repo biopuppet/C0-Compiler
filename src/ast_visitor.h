@@ -3,18 +3,16 @@
 
 #include "ast.h"
 
-class ASTVisitor
-{
-
+class ASTVisitor {
 public:
-    ASTVisitor(ASTNode *node) : m_top(node) {}
-    virtual ~ASTVisitor(){}
+  ASTVisitor(ASTNode *node) : m_top(node) {}
+  virtual ~ASTVisitor() {}
 
-    virtual bool Visit(ASTNode *node = nullptr);
-    bool TraverseTranslationUnitDecl(TranslationUnitDecl *tud);
+  virtual bool Visit(ASTNode *node = nullptr);
+  bool TraverseTranslationUnitDecl(TranslationUnitDecl *tud);
 
 private:
-    ASTNode *m_top;
+  ASTNode *m_top;
 };
 
 #endif  // C0C_AST_VISITOR_H

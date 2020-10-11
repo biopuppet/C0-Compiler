@@ -1,9 +1,8 @@
 ---
-# 语言: None, Cpp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
 Language:	Cpp
-# BasedOnStyle:	LLVM
+BasedOnStyle:	Google
 # 访问说明符(public、private等)的偏移
-AccessModifierOffset:	-4
+AccessModifierOffset:	-2
 # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
 AlignAfterOpenBracket:	Align
 # 连续赋值时，对齐所有等号
@@ -19,11 +18,13 @@ AlignEscapedNewlines: Right
 AlignOperands:	true
 # 对齐连续的尾随的注释
 AlignTrailingComments:	true
- 
+# 对齐连续宏定义
+AlignConsecutiveMacros: true
+
 # 允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine:	false
 # 允许短的块放在同一行
-AllowShortBlocksOnASingleLine:	true
+AllowShortBlocksOnASingleLine:	false
 # 允许短的case标签放在同一行
 AllowShortCaseLabelsOnASingleLine:	false
 # 允许短的函数放在同一行: None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
@@ -49,7 +50,7 @@ BinPackParameters:	false
 # 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效
 BraceWrapping:   
   # class定义后面
-  AfterClass:	true
+  AfterClass:	false
   # 控制语句后面
   AfterControlStatement:	false
   # enum定义后面
@@ -97,9 +98,9 @@ CompactNamespaces: false
 # 构造函数的初始化列表要么都在同一行，要么都各自一行
 ConstructorInitializerAllOnOneLineOrOnePerLine:	false
 # 构造函数的初始化列表的缩进宽度
-ConstructorInitializerIndentWidth:	4
+ConstructorInitializerIndentWidth:	2
 # 延续的行的缩进宽度
-ContinuationIndentWidth:	4
+ContinuationIndentWidth:	2
 # 去除C++11的列表初始化的大括号{后和}前的空格
 Cpp11BracedListStyle:	true
 # 继承最常用的指针和引用的对齐方式
@@ -124,7 +125,7 @@ IndentCaseLabels:	false
 # 缩进预处理指令
 IndentPPDirectives:  None
 # 缩进宽度
-IndentWidth:	4
+IndentWidth:	2
 # 函数返回类型换行时，缩进函数声明或函数定义的函数名
 IndentWrappedFunctionNames:	false
 # 保留在块开始处的空行
@@ -138,7 +139,7 @@ MaxEmptyLinesToKeep:	1
 # 命名空间的缩进: None, Inner(缩进嵌套的命名空间中的内容), All
 NamespaceIndentation:	Inner
 # 使用ObjC块时缩进宽度
-ObjCBlockIndentWidth:	4
+ObjCBlockIndentWidth:	2
 # 在ObjC的@property后添加一个空格
 ObjCSpaceAfterProperty:	false
 # 在ObjC的protocol列表前添加一个空格
@@ -163,7 +164,7 @@ PointerAlignment:	Right
 # 允许重新排版注释
 ReflowComments:	true
 # 允许排序#include
-SortIncludes:   false
+SortIncludes:	false
  
 # 在C风格类型转换后添加空格
 SpaceAfterCStyleCast:	false
@@ -191,6 +192,6 @@ SpacesInSquareBrackets:	false
 # 标准: Cpp03, Cpp11, Auto
 Standard:	Cpp11
 # tab宽度
-TabWidth:	4
+TabWidth:	2
 # 使用tab字符: Never, ForIndentation, ForContinuationAndIndentation, Always
 UseTab:	Never
