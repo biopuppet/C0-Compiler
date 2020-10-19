@@ -41,7 +41,7 @@ static int parse_opt(int argc, char *const argv[])
       {.name = "output", .has_arg = 1, .flag = nullptr, .val = 'o'},
       {.name = "g", .has_arg = 0, .flag = nullptr, .val = 'g'},
     };
-    int c = getopt_long(argc, argv, "co:g", long_options, NULL);
+    int c = getopt_long(argc, argv, "c:o:g", long_options, NULL);
     if (c == -1)
       break;
     switch (c) {

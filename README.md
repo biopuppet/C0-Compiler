@@ -1,7 +1,6 @@
-# C0-Compiler ![Build Status](https://travis-ci.com/biopuppet/C0-Compiler.svg?branch=master) [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/biopuppet/C0-Compiler.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/biopuppet/C0-Compiler/context:cpp)
+# C0-Compiler ![Build Status](https://travis-ci.org/biopuppet/C0-Compiler.svg?branch=master) [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/biopuppet/C0-Compiler.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/biopuppet/C0-Compiler/context:cpp)
 A C0(C-like) compiler in C++11.
 Currently only supports MIPS32 architecture.
-
 
 ## Enviroment
 - clang 6.0.0

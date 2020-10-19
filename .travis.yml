@@ -3,12 +3,9 @@ sudo: required
 dist: bionic
 compiler:
 - clang
+
 os:
 - linux
-
-before_install:
-- which clang
-- which cmake
 
 script:
 - mkdir -p build && cd build && cmake .. && make
